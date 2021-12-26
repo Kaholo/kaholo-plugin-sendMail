@@ -1,490 +1,492 @@
 {
-    "name": "SendMail",
-    "type": "executer",
-    "execProgram": "node",
-    "main": "app.js",
-    "version": "1.2.2",
-    "imgUrl": "envelope.png",
-    "settings" : [
+  "name": "SendMail",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.2.4",
+  "imgUrl": "envelope.png",
+  "settings": [
+    {
+      "name": "SERVICE",
+      "viewName": "Services",
+      "type": "options",
+      "options": [
         {
-            "name": "SERVICE",
-            "viewName": "Services",
-            "type": "options",
-            "options":
-            [
-                {
-                    "id": "126",
-                    "name": "126"
-                },
-                {
-                    "id": "163",
-                    "name": "163"                
-                },
-                {
-                    "id": "1und1",
-                    "name": "1und1"
-                },
-                {
-                    "id": "AOL",
-                    "name": "AOL"                
-                },
-                {
-                    "id": "DebugMail",
-                    "name": "DebugMail"
-                },
-                {
-                    "id": "DynectEmail",
-                    "name": "DynectEmail"
-                },
-                {
-                    "id": "FastMail",
-                    "name": "FastMail"
-                },
-                {
-                    "id": "GandiMail",
-                    "name": "GandiMail"
-                },
-                {
-                    "id": "Gmail",
-                    "name": "Gmail"
-                },
-                {
-                    "id": "Godaddy",
-                    "name": "Godaddy"
-                },
-                {
-                    "id": "GodaddyAsia",
-                    "name": "GodaddyAsia"
-                },
-                {
-                    "id": "GodaddyEurope",
-                    "name": "GodaddyEurope"
-                },
-                {
-                    "id": "hot.ee",
-                    "name": "hot.ee"
-                },
-                {
-                    "id": "Hotmail",
-                    "name": "Hotmail"
-                },
-                {
-                    "id": "iCloud",
-                    "name": "iCloud"
-                },
-                {
-                    "id": "mail.ee",
-                    "name": "mail.ee"
-                },
-                {
-                    "id": "Mail.ru",
-                    "name": "Mail.ru"
-                },
-                {
-                    "id": "Maildev",
-                    "name": "Maildev"
-                },
-                {
-                    "id": "Mailgun",
-                    "name": "Mailgun"
-                },
-                {
-                    "id": "Mailjet",
-                    "name": "Mailjet"
-                },
-                {
-                    "id": "Mailosaur",
-                    "name": "Mailosaur"
-                },
-                {
-                    "id": "Mandrill",
-                    "name": "Mandrill"
-                },
-                {
-                    "id": "Naver",
-                    "name": "Naver"
-                },
-                {
-                    "id": "OpenMailBox",
-                    "name": "OpenMailBox"
-                },
-                {
-                    "id": "Outlook365",
-                    "name": "Outlook365"
-                },
-                {
-                    "id": "Postmark",
-                    "name": "Postmark"
-                },
-                {
-                    "id": "QQ",
-                    "name": "QQ"
-                },
-                {
-                    "id": "QQex",
-                    "name": "QQex"
-                },
-                {
-                    "id": "SendCloud",
-                    "name": "SendCloud"
-                },
-                {
-                    "id": "SendGrid",
-                    "name": "SendGrid"
-                },
-                {
-                    "id": "SendinBlue",
-                    "name": "SendinBlue"
-                },
-                {
-                    "id": "SendPulse",
-                    "name": "SendPulse"
-                },
-                {
-                    "id": "SES",
-                    "name": "SES"
-                },
-                {
-                    "id": "SES-US-EAST-1",
-                    "name": "SES-US-EAST-1"
-                },
-                {
-                    "id": "SES-US-WEST-2",
-                    "name": "SES-US-WEST-2"
-                },
-                {
-                    "id": "SES-EU-WEST-1",
-                    "name": "SES-EU-WEST-1"
-                },
-                {
-                    "id": "Sparkpost",
-                    "name": "Sparkpost"
-                },
-                {
-                    "id": "Yahoo",
-                    "name": "Yahoo"
-                },
-                {
-                    "id": "Yandex",
-                    "name": "Yandex"
-                },
-                {
-                    "id": "Zoho",
-                    "name": "Zoho"
-                },
-                {
-                    "id": "qiye.aliyun",
-                    "name": "qiye.aliyun"
-                }
-            ]
+          "id": "126",
+          "name": "126"
         },
         {
-            "name": "apiKey",
-            "viewName": "API Key",
-            "type": "vault"
+          "id": "163",
+          "name": "163"
         },
         {
-            "name": "USERNAME",
-            "viewName": "Username",
-            "type": "string"
+          "id": "1und1",
+          "name": "1und1"
         },
         {
-            "name": "PASSWORD",
-            "viewName": "Password",
-            "type": "vault"
+          "id": "AOL",
+          "name": "AOL"
+        },
+        {
+          "id": "DebugMail",
+          "name": "DebugMail"
+        },
+        {
+          "id": "DynectEmail",
+          "name": "DynectEmail"
+        },
+        {
+          "id": "FastMail",
+          "name": "FastMail"
+        },
+        {
+          "id": "GandiMail",
+          "name": "GandiMail"
+        },
+        {
+          "id": "Gmail",
+          "name": "Gmail"
+        },
+        {
+          "id": "Godaddy",
+          "name": "Godaddy"
+        },
+        {
+          "id": "GodaddyAsia",
+          "name": "GodaddyAsia"
+        },
+        {
+          "id": "GodaddyEurope",
+          "name": "GodaddyEurope"
+        },
+        {
+          "id": "hot.ee",
+          "name": "hot.ee"
+        },
+        {
+          "id": "Hotmail",
+          "name": "Hotmail"
+        },
+        {
+          "id": "iCloud",
+          "name": "iCloud"
+        },
+        {
+          "id": "mail.ee",
+          "name": "mail.ee"
+        },
+        {
+          "id": "Mail.ru",
+          "name": "Mail.ru"
+        },
+        {
+          "id": "Maildev",
+          "name": "Maildev"
+        },
+        {
+          "id": "Mailgun",
+          "name": "Mailgun"
+        },
+        {
+          "id": "Mailjet",
+          "name": "Mailjet"
+        },
+        {
+          "id": "Mailosaur",
+          "name": "Mailosaur"
+        },
+        {
+          "id": "Mandrill",
+          "name": "Mandrill"
+        },
+        {
+          "id": "Naver",
+          "name": "Naver"
+        },
+        {
+          "id": "OpenMailBox",
+          "name": "OpenMailBox"
+        },
+        {
+          "id": "Outlook365",
+          "name": "Outlook365"
+        },
+        {
+          "id": "Postmark",
+          "name": "Postmark"
+        },
+        {
+          "id": "QQ",
+          "name": "QQ"
+        },
+        {
+          "id": "QQex",
+          "name": "QQex"
+        },
+        {
+          "id": "SendCloud",
+          "name": "SendCloud"
+        },
+        {
+          "id": "SendGrid",
+          "name": "SendGrid"
+        },
+        {
+          "id": "SendinBlue",
+          "name": "SendinBlue"
+        },
+        {
+          "id": "SendPulse",
+          "name": "SendPulse"
+        },
+        {
+          "id": "SES",
+          "name": "SES"
+        },
+        {
+          "id": "SES-US-EAST-1",
+          "name": "SES-US-EAST-1"
+        },
+        {
+          "id": "SES-US-WEST-2",
+          "name": "SES-US-WEST-2"
+        },
+        {
+          "id": "SES-EU-WEST-1",
+          "name": "SES-EU-WEST-1"
+        },
+        {
+          "id": "Sparkpost",
+          "name": "Sparkpost"
+        },
+        {
+          "id": "Yahoo",
+          "name": "Yahoo"
+        },
+        {
+          "id": "Yandex",
+          "name": "Yandex"
+        },
+        {
+          "id": "Zoho",
+          "name": "Zoho"
+        },
+        {
+          "id": "qiye.aliyun",
+          "name": "qiye.aliyun"
         }
-    ],
-    "methods": [{
-        "name": "sendMailByService",
-        "viewName": "Send mail by service",
-        "params": [
-            {
-                "name": "SERVICE",
-                "viewName": "Services",
-                "type": "options",
-                "options":
-                [
-                    {
-                        "id": "126",
-                        "name": "126"
-                    },
-                    {
-                        "id": "163",
-                        "name": "163"
-                    },
-                    {
-                        "id": "1und1",
-                        "name": "1und1"
-                    },
-                    {
-                        "id": "AOL",
-                        "name": "AOL"
-                    },
-                    {
-                        "id": "DebugMail",
-                        "name": "DebugMail"
-                    },
-                    {
-                        "id": "DynectEmail",
-                        "name": "DynectEmail"
-                    },
-                    {
-                        "id": "FastMail",
-                        "name": "FastMail"
-                    },
-                    {
-                        "id": "GandiMail",
-                        "name": "GandiMail"
-                    },
-                    {
-                        "id": "Gmail",
-                        "name": "Gmail"
-                    },
-                    {
-                        "id": "Godaddy",
-                        "name": "Godaddy"
-                    },
-                    {
-                        "id": "GodaddyAsia",
-                        "name": "GodaddyAsia"
-                    },
-                    {
-                        "id": "GodaddyEurope",
-                        "name": "GodaddyEurope"
-                    },
-                    {
-                        "id": "hot.ee",
-                        "name": "hot.ee"
-                    },
-                    {
-                        "id": "Hotmail",
-                        "name": "Hotmail"
-                    },
-                    {
-                        "id": "iCloud",
-                        "name": "iCloud"
-                    },
-                    {
-                        "id": "mail.ee",
-                        "name": "mail.ee"
-                    },
-                    {
-                        "id": "Mail.ru",
-                        "name": "Mail.ru"
-                    },
-                    {
-                        "id": "Maildev",
-                        "name": "Maildev"
-                    },
-                    {
-                        "id": "Mailgun",
-                        "name": "Mailgun"
-                    },
-                    {
-                        "id": "Mailjet",
-                        "name": "Mailjet"
-                    },
-                    {
-                        "id": "Mailosaur",
-                        "name": "Mailosaur"
-                    },
-                    {
-                        "id": "Mandrill",
-                        "name": "Mandrill"
-                    },
-                    {
-                        "id": "Naver",
-                        "name": "Naver"
-                    },
-                    {
-                        "id": "OpenMailBox",
-                        "name": "OpenMailBox"
-                    },
-                    {
-                        "id": "Outlook365",
-                        "name": "Outlook365"
-                    },
-                    {
-                        "id": "Postmark",
-                        "name": "Postmark"
-                    },
-                    {
-                        "id": "QQ",
-                        "name": "QQ"
-                    },
-                    {
-                        "id": "QQex",
-                        "name": "QQex"
-                    },
-                    {
-                        "id": "SendCloud",
-                        "name": "SendCloud"
-                    },
-                    {
-                        "id": "SendGrid",
-                        "name": "SendGrid"
-                    },
-                    {
-                        "id": "SendinBlue",
-                        "name": "SendinBlue"
-                    },
-                    {
-                        "id": "SendPulse",
-                        "name": "SendPulse"
-                    },
-                    {
-                        "id": "SES",
-                        "name": "SES"
-                    },
-                    {
-                        "id": "SES-US-EAST-1",
-                        "name": "SES-US-EAST-1"
-                    },
-                    {
-                        "id": "SES-US-WEST-2",
-                        "name": "SES-US-WEST-2"
-                    },
-                    {
-                        "id": "SES-EU-WEST-1",
-                        "name": "SES-EU-WEST-1"
-                    },
-                    {
-                        "id": "Sparkpost",
-                        "name": "Sparkpost"
-                    },
-                    {
-                        "id": "Yahoo",
-                        "name": "Yahoo"
-                    },
-                    {
-                        "id": "Yandex",
-                        "name": "Yandex"
-                    },
-                    {
-                        "id": "Zoho",
-                        "name": "Zoho"
-                    },
-                    {
-                        "id": "qiye.aliyun",
-                        "name": "qiye.aliyun"
-                    }
-                ]
-            },
-            {
-                "name": "apiKey",
-                "viewName": "API Key",
-                "type": "vault"
-            },
-            {
-                "name": "USERNAME",
-                "viewName": "Username",
-                "type": "string"
-            },
-            {
-                "name": "PASSWORD",
-                "viewName": "Password",
-                "type": "vault"
-            },
-            {
-                "name": "FROM",
-                "viewName": "From",
-                "type": "string"
-            },
-            {
-                "name": "TO",
-                "viewName": "to",
-                "type": "string"
-            },
-            {
-                "name": "CC",
-                "viewName": "cc",
-                "type": "string"
-            },
-            {
-                "name": "BCC",
-                "viewName": "bcc",
-                "type": "string"
-            },
-            {
-                "name": "SUBJECT",
-                "viewName": "Message subject",
-                "type": "string"
-            },
-            {
-                "name": "TEXT",
-                "viewName": "Plaintext message",
-                "type": "string"
-            },
-            {
-                "name": "HTML",
-                "viewName": "Html message",
-                "type": "string"
-            },
-            {
-                "name": "attachmentPath",
-                "viewName": "Attachment Path",
-                "type": "string"
-            }
-        ]},
+      ]
+    },
+    {
+      "name": "apiKey",
+      "viewName": "API Key",
+      "type": "vault"
+    },
+    {
+      "name": "USERNAME",
+      "viewName": "Username",
+      "type": "string"
+    },
+    {
+      "name": "PASSWORD",
+      "viewName": "Password",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "sendMailByService",
+      "viewName": "Send mail by service",
+      "params": [
         {
-        "name": "sendMailBySMTP",
-        "viewName": "Send mail by SMTP",
-        "params": [
+          "name": "SERVICE",
+          "viewName": "Services",
+          "type": "options",
+          "options": [
             {
-                "name": "HOST",
-                "viewName": "Host",
-                "type": "string"
+              "id": "126",
+              "name": "126"
             },
             {
-                "name": "PORT",
-                "viewName": "Port",
-                "type": "string"
+              "id": "163",
+              "name": "163"
             },
             {
-                "name": "USERNAME",
-                "viewName": "Username",
-                "type": "string"
+              "id": "1und1",
+              "name": "1und1"
             },
             {
-                "name": "PASSWORD",
-                "viewName": "Password",
-                "type": "string"
+              "id": "AOL",
+              "name": "AOL"
             },
             {
-                "name": "FROM",
-                "viewName": "From",
-                "type": "string"
+              "id": "DebugMail",
+              "name": "DebugMail"
             },
             {
-                "name": "TO",
-                "viewName": "to",
-                "type": "string"
+              "id": "DynectEmail",
+              "name": "DynectEmail"
             },
             {
-                "name": "CC",
-                "viewName": "cc",
-                "type": "string"
+              "id": "FastMail",
+              "name": "FastMail"
             },
             {
-                "name": "BCC",
-                "viewName": "bcc",
-                "type": "string"
+              "id": "GandiMail",
+              "name": "GandiMail"
             },
             {
-                "name": "SUBJECT",
-                "viewName": "Message subject",
-                "type": "string"
+              "id": "Gmail",
+              "name": "Gmail"
             },
             {
-                "name": "TEXT",
-                "viewName": "Plaintext message",
-                "type": "string"
+              "id": "Godaddy",
+              "name": "Godaddy"
             },
             {
-                "name": "HTML",
-                "viewName": "Html message",
-                "type": "string"
+              "id": "GodaddyAsia",
+              "name": "GodaddyAsia"
+            },
+            {
+              "id": "GodaddyEurope",
+              "name": "GodaddyEurope"
+            },
+            {
+              "id": "hot.ee",
+              "name": "hot.ee"
+            },
+            {
+              "id": "Hotmail",
+              "name": "Hotmail"
+            },
+            {
+              "id": "iCloud",
+              "name": "iCloud"
+            },
+            {
+              "id": "mail.ee",
+              "name": "mail.ee"
+            },
+            {
+              "id": "Mail.ru",
+              "name": "Mail.ru"
+            },
+            {
+              "id": "Maildev",
+              "name": "Maildev"
+            },
+            {
+              "id": "Mailgun",
+              "name": "Mailgun"
+            },
+            {
+              "id": "Mailjet",
+              "name": "Mailjet"
+            },
+            {
+              "id": "Mailosaur",
+              "name": "Mailosaur"
+            },
+            {
+              "id": "Mandrill",
+              "name": "Mandrill"
+            },
+            {
+              "id": "Naver",
+              "name": "Naver"
+            },
+            {
+              "id": "OpenMailBox",
+              "name": "OpenMailBox"
+            },
+            {
+              "id": "Outlook365",
+              "name": "Outlook365"
+            },
+            {
+              "id": "Postmark",
+              "name": "Postmark"
+            },
+            {
+              "id": "QQ",
+              "name": "QQ"
+            },
+            {
+              "id": "QQex",
+              "name": "QQex"
+            },
+            {
+              "id": "SendCloud",
+              "name": "SendCloud"
+            },
+            {
+              "id": "SendGrid",
+              "name": "SendGrid"
+            },
+            {
+              "id": "SendinBlue",
+              "name": "SendinBlue"
+            },
+            {
+              "id": "SendPulse",
+              "name": "SendPulse"
+            },
+            {
+              "id": "SES",
+              "name": "SES"
+            },
+            {
+              "id": "SES-US-EAST-1",
+              "name": "SES-US-EAST-1"
+            },
+            {
+              "id": "SES-US-WEST-2",
+              "name": "SES-US-WEST-2"
+            },
+            {
+              "id": "SES-EU-WEST-1",
+              "name": "SES-EU-WEST-1"
+            },
+            {
+              "id": "Sparkpost",
+              "name": "Sparkpost"
+            },
+            {
+              "id": "Yahoo",
+              "name": "Yahoo"
+            },
+            {
+              "id": "Yandex",
+              "name": "Yandex"
+            },
+            {
+              "id": "Zoho",
+              "name": "Zoho"
+            },
+            {
+              "id": "qiye.aliyun",
+              "name": "qiye.aliyun"
             }
-        ]
-    }]
+          ]
+        },
+        {
+          "name": "apiKey",
+          "viewName": "API Key",
+          "type": "vault"
+        },
+        {
+          "name": "USERNAME",
+          "viewName": "Username",
+          "type": "string"
+        },
+        {
+          "name": "PASSWORD",
+          "viewName": "Password",
+          "type": "vault"
+        },
+        {
+          "name": "FROM",
+          "viewName": "From",
+          "type": "string"
+        },
+        {
+          "name": "TO",
+          "viewName": "to",
+          "type": "string"
+        },
+        {
+          "name": "CC",
+          "viewName": "cc",
+          "type": "string"
+        },
+        {
+          "name": "BCC",
+          "viewName": "bcc",
+          "type": "string"
+        },
+        {
+          "name": "SUBJECT",
+          "viewName": "Message subject",
+          "type": "string"
+        },
+        {
+          "name": "TEXT",
+          "viewName": "Plaintext message",
+          "type": "string"
+        },
+        {
+          "name": "HTML",
+          "viewName": "Html message",
+          "type": "string"
+        },
+        {
+          "name": "attachmentPath",
+          "viewName": "Attachment Path",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "sendMailBySMTP",
+      "viewName": "Send mail by SMTP",
+      "params": [
+        {
+          "name": "HOST",
+          "viewName": "Host",
+          "type": "string"
+        },
+        {
+          "name": "PORT",
+          "viewName": "Port",
+          "type": "string"
+        },
+        {
+          "name": "USERNAME",
+          "viewName": "Username",
+          "type": "string"
+        },
+        {
+          "name": "PASSWORD",
+          "viewName": "Password",
+          "type": "string"
+        },
+        {
+          "name": "FROM",
+          "viewName": "From",
+          "type": "string"
+        },
+        {
+          "name": "TO",
+          "viewName": "to",
+          "type": "string"
+        },
+        {
+          "name": "CC",
+          "viewName": "cc",
+          "type": "string"
+        },
+        {
+          "name": "BCC",
+          "viewName": "bcc",
+          "type": "string"
+        },
+        {
+          "name": "SUBJECT",
+          "viewName": "Message subject",
+          "type": "string"
+        },
+        {
+          "name": "TEXT",
+          "viewName": "Plaintext message",
+          "type": "string"
+        },
+        {
+          "name": "HTML",
+          "viewName": "Html message",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "category": "NOTIFICATIONS"
 }
