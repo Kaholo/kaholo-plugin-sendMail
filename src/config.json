@@ -1,10 +1,19 @@
 {
   "name": "SendMail",
+  "viewName": "Send Mail",
   "type": "executer",
   "execProgram": "node",
   "main": "app.js",
   "version": "1.2.4",
   "imgUrl": "envelope.png",
+  "keywords": [
+    "email",
+    "mail",
+    "service",
+    "smtp",
+    "message",
+    "notifications"
+    ],
   "settings": [
     {
       "name": "SERVICE",
