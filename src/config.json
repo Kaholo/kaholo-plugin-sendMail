@@ -4,8 +4,8 @@
   "type": "executer",
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.2.4",
-  "imgUrl": "envelope.png",
+  "version": "1.2.5",
+  "imgUrl": "logo.png",
   "keywords": [
     "email",
     "mail",
@@ -17,7 +17,7 @@
   "settings": [
     {
       "name": "SERVICE",
-      "viewName": "Services",
+      "viewName": "Service",
       "type": "options",
       "options": [
         {
@@ -205,11 +205,11 @@
   "methods": [
     {
       "name": "sendMailByService",
-      "viewName": "Send mail by service",
+      "viewName": "Send Mail By Service",
       "params": [
         {
           "name": "SERVICE",
-          "viewName": "Services",
+          "viewName": "Service",
           "type": "options",
           "options": [
             {
@@ -376,123 +376,188 @@
               "id": "qiye.aliyun",
               "name": "qiye.aliyun"
             }
-          ]
+          ],
+          "description": "",
+          "required": true
         },
         {
           "name": "apiKey",
           "viewName": "API Key",
-          "type": "vault"
+          "type": "vault",
+          "description": "An API Key if provided by the selected service",
+          "required": false
         },
         {
           "name": "USERNAME",
           "viewName": "Username",
-          "type": "string"
+          "type": "string",
+          "description": "Username to authenticate with the selected service",
+          "placeholder": "myuser@myservice.com",
+          "required": false
         },
         {
           "name": "PASSWORD",
           "viewName": "Password",
-          "type": "vault"
+          "type": "vault",
+          "description": "Password to authenticate with the selected service",
+          "required": false
         },
         {
           "name": "FROM",
           "viewName": "From",
-          "type": "string"
+          "type": "string",
+          "description": "The email address of the sender of the email",
+          "placeholder": "kaholo-notifications@myorg.com",
+          "required": true
         },
         {
           "name": "TO",
-          "viewName": "to",
-          "type": "string"
+          "viewName": "To",
+          "type": "string",
+          "description": "One or more email addresses (comma separated) of recipients of the email",
+          "placeholder": "johnny.d@myorg.com, amber.h@myorg.com",
+          "required": true
         },
         {
           "name": "CC",
-          "viewName": "cc",
-          "type": "string"
+          "viewName": "CC",
+          "type": "string",
+          "description": "One or more email addresses (comma separated) of CC recipients of the email",
+          "placeholder": "penney.a@myorg.com",
+          "required": false
         },
         {
           "name": "BCC",
-          "viewName": "bcc",
-          "type": "string"
+          "viewName": "BCC",
+          "type": "string",
+          "description": "One or more email addresses (comma separated) of BCC recipients of the email",
+          "placeholder": "ray.c@myorg.com",
+          "required": false
         },
         {
           "name": "SUBJECT",
-          "viewName": "Message subject",
-          "type": "string"
+          "viewName": "Message Subject",
+          "type": "string",
+          "description": "The subject line of the email message",
+          "placeholder": "Pipeline Success Notification",
+          "required": true
         },
         {
           "name": "TEXT",
-          "viewName": "Plaintext message",
-          "type": "string"
+          "viewName": "Plaintext Message",
+          "type": "string",
+          "description": "Plaintext version of email",
+          "placeholder": "Your Pipeline has completed successfully!",
+          "required": false
         },
         {
           "name": "HTML",
-          "viewName": "Html message",
-          "type": "string"
+          "viewName": "HTML Message",
+          "type": "string",
+          "description": "HTML version of email",
+          "placeholder": "<b><em>Your Pipeline has completed sucessfully!</em></b><img src=\"https://upload.wikimedia.org/wikipedia/commons/6/64/Champagne_uncorking_photographed_with_a_high_speed_air-gap_flash.jpg\" alt=\"champagne image\">",
+          "required": false
         },
         {
           "name": "attachmentPath",
           "viewName": "Attachment Path",
-          "type": "string"
+          "type": "string",
+          "description": "Path to file on Kaholo agent to attach to email",
+          "placeholder": "/home/testpipeline-001/results.zip",
+          "required": false
         }
       ]
     },
     {
       "name": "sendMailBySMTP",
-      "viewName": "Send mail by SMTP",
+      "viewName": "Send Mail By SMTP",
       "params": [
         {
           "name": "HOST",
           "viewName": "Host",
-          "type": "string"
+          "type": "string",
+          "description": "Hostname or IP address of your SMTP server",
+          "placeholder": "email-smtp.ap-southnorth-1.amazonaws.com",
+          "required": false
         },
         {
           "name": "PORT",
           "viewName": "Port",
-          "type": "string"
+          "type": "string",
+          "description": "Port number of STMP server",
+          "placeholder": "25",
+          "required": false
         },
         {
           "name": "USERNAME",
           "viewName": "Username",
-          "type": "string"
+          "type": "string",
+          "description": "Username to authenticate with the selected service",
+          "placeholder": "myuser@myservice.com",
+          "required": false
         },
         {
           "name": "PASSWORD",
           "viewName": "Password",
-          "type": "string"
+          "type": "vault",
+          "description": "Password to authenticate with the selected service",
+          "required": false
         },
         {
           "name": "FROM",
           "viewName": "From",
-          "type": "string"
+          "type": "string",
+          "description": "The email address of the sender of the email",
+          "placeholder": "kaholo-notifications@myorg.com",
+          "required": true
         },
         {
           "name": "TO",
-          "viewName": "to",
-          "type": "string"
+          "viewName": "To",
+          "type": "string",
+          "description": "One or more email addresses (comma separated) of recipients of the email",
+          "placeholder": "johnny.d@myorg.com, amber.h@myorg.com",
+          "required": true
         },
         {
           "name": "CC",
-          "viewName": "cc",
-          "type": "string"
+          "viewName": "CC",
+          "type": "string",
+          "description": "One or more email addresses (comma separated) of CC recipients of the email",
+          "placeholder": "penney.a@myorg.com",
+          "required": false
         },
         {
           "name": "BCC",
-          "viewName": "bcc",
-          "type": "string"
+          "viewName": "BCC",
+          "type": "string",
+          "description": "One or more email addresses (comma separated) of BCC recipients of the email",
+          "placeholder": "ray.c@myorg.com",
+          "required": false
         },
         {
           "name": "SUBJECT",
-          "viewName": "Message subject",
-          "type": "string"
+          "viewName": "Message Subject",
+          "type": "string",
+          "description": "The subject line of the email message",
+          "placeholder": "Pipeline Success Notification",
+          "required": true
         },
         {
           "name": "TEXT",
-          "viewName": "Plaintext message",
-          "type": "string"
+          "viewName": "Plaintext Message",
+          "type": "string",
+          "description": "Plaintext version of email",
+          "placeholder": "Your Pipeline has completed successfully!",
+          "required": false
         },
         {
           "name": "HTML",
-          "viewName": "Html message",
-          "type": "string"
+          "viewName": "HTML Message",
+          "type": "string",
+          "description": "HTML version of email",
+          "placeholder": "<b><em>Your Pipeline has completed sucessfully!</em></b><img src=\"https://upload.wikimedia.org/wikipedia/commons/6/64/Champagne_uncorking_photographed_with_a_high_speed_air-gap_flash.jpg\" alt=\"champagne image\">",
+          "required": false
         }
       ]
     }
