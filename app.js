@@ -1,54 +1,57 @@
 const nodemailer = require("nodemailer");
 const nodemailerSendgrid = require("nodemailer-sendgrid");
-const { sendWithTransporter } = require("./mail-service");
+const kaholoPluginLibrary = require("@kaholo/plugin-library");
+const { sendWithTransport } = require("./mail-service");
 
-function sendMailByService(action, settings) {
-  const service = action.params.SERVICE || settings.SERVICE;
-  const apiKey = action.params.apiKey || settings.apiKey;
-  const user = action.params.USERNAME || settings.USERNAME;
-  const pass = action.params.PASSWORD || settings.PASSWORD;
+function sendMailByService({
+  SERVICE: service,
+  USERNAME: user,
+  PASSWORD: pass,
+  apiKey,
+  ...mailingDetails
+}) {
+  let transportCreationOptions;
 
-  let transporter;
   if (service === "SendGrid") {
-    transporter = nodemailer.createTransport(
-      nodemailerSendgrid({
-        apiKey,
-      }),
-    );
+    transportCreationOptions = nodemailerSendgrid({
+      apiKey,
+    });
   } else {
-    const transporterOptions = {
+    transportCreationOptions = {
       service,
+      auth: (
+        apiKey ? {
+          api_key: apiKey,
+        } : {
+          user,
+          pass,
+        }
+      ),
     };
-    if (apiKey) {
-      transporterOptions.auth = {
-        api_key: apiKey,
-      };
-    } else {
-      transporterOptions.auth = {
-        user,
-        pass,
-      };
-    }
-    transporter = nodemailer.createTransport(transporterOptions);
   }
 
-  return sendWithTransporter(transporter, action);
+  const transport = nodemailer.createTransport(transportCreationOptions);
+  return sendWithTransport(transport, mailingDetails);
 }
-function sendMailBySMTP(action) {
-  const transporter = nodemailer.createTransport({
-    host: action.params.HOST,
-    port: action.params.PORT,
-    secure: (action.params.PORT === 465),
-    auth: {
-      user: action.params.USERNAME,
-      pass: action.params.PASSWORD,
-    },
+
+function sendMailBySMTP({
+  HOST: host,
+  PORT: port,
+  USERNAME: user,
+  PASSWORD: pass,
+  ...mailingDetails
+}) {
+  const transport = nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465,
+    auth: { user, pass },
   });
 
-  return sendWithTransporter(transporter, action);
+  return sendWithTransport(transport, mailingDetails);
 }
 
-module.exports = {
+module.exports = kaholoPluginLibrary.bootstrap({
   sendMailByService,
   sendMailBySMTP,
-};
+});

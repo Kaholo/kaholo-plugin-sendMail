@@ -1,35 +1,25 @@
 const path = require("path");
 
-function sendWithTransporter(transporter, action) {
-  return new Promise((resolve, reject) => {
-    const mailOptions = {
-      from: action.params.FROM,
-      to: action.params.TO,
-      cc: action.params.CC,
-      bcc: action.params.BCC,
-      subject: action.params.SUBJECT,
-      text: action.params.TEXT,
-      html: action.params.HTML,
-    };
+function sendWithTransport(transporter, {
+  attachmentPath,
+  ...mailOptions
+}) {
+  const correctedMailOptions = Object.fromEntries(
+    Object.entries(mailOptions).map(([key, value]) => [key.toLowerCase(), value]),
+  );
 
-    if (action.params.attachmentPath) {
-      mailOptions.attachments = [
-        {
-          filename: path.parse(action.params.attachmentPath).base,
-          path: action.params.attachmentPath,
-        },
-      ];
-    }
+  if (attachmentPath) {
+    correctedMailOptions.attachments = [
+      {
+        filename: path.parse(attachmentPath).base,
+        path: attachmentPath,
+      },
+    ];
+  }
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        reject(error);
-      }
-      resolve(info);
-    });
-  });
+  return transporter.sendMail(correctedMailOptions);
 }
 
 module.exports = {
-  sendWithTransporter,
+  sendWithTransport,
 };
