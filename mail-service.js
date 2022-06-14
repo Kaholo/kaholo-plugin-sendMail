@@ -1,17 +1,32 @@
 const path = require("path");
 
+const NEW_LINE_WITH_OPTIONAL_COMMA_REGEX = /(?:,\s*)?\n/g;
+const COMMA_WITH_WHITESPACE_REGEX = /\s*,\s*/g;
+
 function sendWithTransport(transporter, {
   attachmentPath,
   ...mailOptions
 }) {
   const correctedMailOptions = Object.fromEntries(
-    Object.entries(mailOptions).map(([key, value]) => [key.toLowerCase(), value]),
+    Object
+      .entries(mailOptions)
+      .map(([key, value]) => [key.toLowerCase(), value]),
   );
+
+  const fieldsWithMultilineSupport = ["bcc", "to", "cc"];
+  fieldsWithMultilineSupport.forEach((field) => {
+    if (correctedMailOptions[field]) {
+      correctedMailOptions[field] = correctedMailOptions[field]
+        .trim()
+        .replace(NEW_LINE_WITH_OPTIONAL_COMMA_REGEX, ", ")
+        .replace(COMMA_WITH_WHITESPACE_REGEX, ", ");
+    }
+  });
 
   if (attachmentPath) {
     correctedMailOptions.attachments = [
       {
-        filename: path.parse(attachmentPath).base,
+        filename: path.basename(attachmentPath),
         path: attachmentPath,
       },
     ];
