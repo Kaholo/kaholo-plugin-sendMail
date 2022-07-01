@@ -1,3 +1,8 @@
+# DEPRECATED
+Following plugins continue the functionality:
+* https://github.com/Kaholo/kaholo-plugin-email-services
+* https://github.com/Kaholo/kaholo-plugin-smtp
+
 # Kaholo Sendmail Plugin
 This plugin enables Kaholo pipelines to send email, either by service or by SMTP. It makes use of the [Nodemailer](https://www.npmjs.com/package/nodemailer) npm package.
 
